@@ -5,7 +5,7 @@
 int moisture_1 = 0;
 int moisture_2 = 0;
 int relay_pin = 7;
-int moist=500
+int moist=500;
 
 void setup() {
   Serial.begin(9600);
@@ -24,7 +24,7 @@ void loop() {
   if ((moisture_1 > moist)||(moisture_2 > moist)) {
     Serial.println("Sensors dry, WATERING ON");
     digitalWrite(relay_pin, HIGH);
-    delay(3600)
+    delay(3600);
   }
   else{
     digitalWrite(relay_pin, LOW);
